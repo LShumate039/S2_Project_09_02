@@ -52,7 +52,7 @@
             <fieldset id="billing">
                 <legend> billing information (required) </legend>
 
-
+                <!-- the input gives the label a box on the website-->
                 <label for="firstBox">FirstName</label>
                 <input type="text" id="firstBox" name="fName" required>
 
@@ -79,7 +79,7 @@
 
                 <label for="phoneBox">Phone</label>
                 <input type="tel" id=" phoneBox" name="phone" pattern=" ^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ ">
-
+                <!--all of the options gives the user to pick the state their from-->
                 <datalist id="stateList">
                     <option value="AL"></option>
                     <option value="AK"></option>
@@ -145,48 +145,51 @@
 
                     <label class=" cardLabel " for=""> <input type="radio"> <img src="sb_master.png" alt=""></label>
                 </fieldset>
+                <!--the pattern element gives the person a specific amount of freedom when putting in the credit card number-->
+                <label for="cityBox"> Credit Card Number</label>
+                <input type="text" id=" cardbox " name=" cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
+                    required>
+
+
+                <label for="monthList"> Expiration Date </label>
+                <select name=" cardMonth " id="monthList" required>
+                    <option value="">Month</option>
+                    <option value="">January(1)</option>
+                    <option value="">Febuary(2)</option>
+                    <option value="">March(3)</option>
+                    <option value="">April(4)</option>
+                    <option value="">May(5)</option>
+                    <option value="">June(6)</option>
+                    <option value="">July(7)</option>
+                    <option value="">August(8)</option>
+                    <option value="">September(9)</option>
+                    <option value="">Octomber(10)</option>
+                    <option value="">November(11)</option>
+                    <option value="">December(12)</option>
+                </select>
+
+
+                <select name="cardYear" id=" yearList ">
+                    <option value="">Year</option>
+                    <option value="">2017</option>
+                    <option value="">2018</option>
+                    <option value="">2019</option>
+                    <option value="">2020</option>
+                    <option value="">2021</option>
+
+
+                </select>
+
+                <label for="csc" id="cscbox"> CSC</label>
+                <input type="text" name="csc" id="csc" placeholder="nnn" pattern=" ^\d{3}$." required>
             </fieldset>
-            <label for="cityBox"> Credit Card Number</label>
-            <input type="text" id=" cardbox " name=" cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
-                required>
 
-
-            <label for="monthList"> Expiration Date </label>
-            <select name=" cardMonth " id="monthList" required>
-                <option value="">month</option>
-                <option value="">January(1)</option>
-                <option value="">Febuary(2)</option>
-                <option value="">March(3)</option>
-                <option value="">April(4)</option>
-                <option value="">May(5)</option>
-                <option value="">June(6)</option>
-                <option value="">July(7)</option>
-                <option value="">August(8)</option>
-                <option value="">September(9)</option>
-                <option value="">Octomber(10)</option>
-                <option value="">November(11)</option>
-                <option value="">December(12)</option>
-            </select>
-
-
-            <select name="cardYear" id="">yearList </select>
-
-
+            <button>
+                <img src="sb_button.png" type="submit" alt="next">
+            </button>
 
 
         </form>
-
-
-
-
-
-
-
-
-
-
-
-
         <aside>
             <h1>Menu Ideas</h1>
             <h2>Salt-Roasted Pecans</h2>
